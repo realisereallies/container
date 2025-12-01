@@ -12,14 +12,14 @@
   <body>
     <header class="header">
       <div class="header__container">
-        <a href="#" class="header__logo">
-          <img src="/logo.svg" alt="Logo" >
+        <a href="#" class="header__logo" aria-label="Portable Space home">
+          <img src="/logo.svg" alt="Portable Space logo" loading="eager" >
         </a>
 
         
-        <nav class="header__nav">
+        <nav class="header__nav" id="header-nav" aria-label="Main navigation">
           <ul class="header__menu">
-            <li><a href="#" class="header__link active">Main</a></li>
+            <li><a href="#" class="header__link active" aria-current="page">Main</a></li>
             <li><a href="#" class="header__link">Services</a></li>
             <li><a href="#" class="header__link">Company</a></li>
             <li><a href="#" class="header__link">Partners</a></li>
@@ -28,60 +28,61 @@
           </ul>
           
           <div class="header__buttons">
-            <button class="header__btn header__btn--primary"><span class="header__btn-text">Get in touch</span></button>
-            <button class="header__btn header__btn--secondary">Login</button>
+            <button class="header__btn header__btn--primary" aria-label="Get in touch"><span class="header__btn-text">Get in touch</span></button>
+            <button class="header__btn header__btn--secondary" aria-label="Login">Login</button>
           </div>
         </nav>
         
-        <button class="header__burger" aria-label="Toggle menu">
-          <img src="/burger.svg" alt="Menu" class="header__burger-icon" >
-          <img src="/x.svg" alt="Close" class="header__burger-close" >
+        <button class="header__burger" aria-label="Toggle menu" aria-expanded="false" aria-controls="header-nav">
+          <img src="/burger.svg" alt="" class="header__burger-icon" aria-hidden="true" >
+          <img src="/x.svg" alt="" class="header__burger-close" aria-hidden="true" >
         </button>
       </div>
     </header>
     
-    <section class="hero">
+    <main>
+    <section class="hero" aria-label="Hero section">
       <h1 class="hero__title">Portable Space</h1>
       
       <div class="hero__image">
-        <img src="/hero-main.png" alt="Container" class="hero__container-img" >
-        <div class="hero__dots">
-          <button class="hero__dot hero__dot--first" data-index="0"></button>
-          <button class="hero__dot hero__dot--second" data-index="1"></button>
-          <button class="hero__dot hero__dot--third" data-index="2"></button>
+        <img src="/hero-main.png" alt="Container" class="hero__container-img" loading="lazy" >
+        <div class="hero__dots" role="tablist" aria-label="Slider navigation dots">
+          <button class="hero__dot hero__dot--first" data-index="0" aria-label="Go to slide 1" role="tab" aria-selected="true"></button>
+          <button class="hero__dot hero__dot--second" data-index="1" aria-label="Go to slide 2" role="tab" aria-selected="false"></button>
+          <button class="hero__dot hero__dot--third" data-index="2" aria-label="Go to slide 3" role="tab" aria-selected="false"></button>
         </div>
       </div>
       
-      <div class="swiper hero__slider">
+      <div class="swiper hero__slider" role="region" aria-label="Hero slider">
         <div class="swiper-wrapper">
-          <div class="swiper-slide hero__item hero__item--first">
+          <article class="swiper-slide hero__item hero__item--first">
             <div class="hero__item-content">
             <h2 class="hero__slide-title">Unlock Your Brain's Full&nbsp;Potentia</h2>
             <p class="hero__slide-text">Efficient logistics transportation ensures fast and reliable delivery of goods worldwide.</p>
-            <img src="/dhl.svg" alt="DHL" class="hero__slide-svg" >
+            <img src="/dhl.svg" alt="DHL" class="hero__slide-svg" loading="lazy" >
           </div>
-          </div>
+          </article>
           
-          <div class="swiper-slide hero__item hero__item--second">
+          <article class="swiper-slide hero__item hero__item--second">
             <div class="hero__item-content">
             <h2 class="hero__slide-title">Move Effortlessly <br>in just minutes</h2>
             <p class="hero__slide-text">Explore a variety of premium products crafted to make life easier and brighter.</p>
-            <img src="/fedex.svg" alt="FedEx" class="hero__slide-svg" >
+            <img src="/fedex.svg" alt="FedEx" class="hero__slide-svg" loading="lazy" >
           </div>
-          </div>
+          </article>
           
-          <div class="swiper-slide hero__item hero__item--third">
+          <article class="swiper-slide hero__item hero__item--third">
           <div class="hero__item-content">
             <h2 class="hero__slide-title">Global support</h2>
             <p class="hero__slide-text">The largest logistics companies in the world work and cooperate with us</p>
-            <img src="/amazon.svg" alt="Amazon" class="hero__slide-svg" >
+            <img src="/amazon.svg" alt="Amazon" class="hero__slide-svg" loading="lazy" >
           </div>
-          </div>
+          </article>
         </div>
         <div class="hero__slider-buttons">
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-next"></div>
+        <button class="swiper-button-prev" aria-label="Previous slide"></button>
+        <div class="swiper-pagination" aria-label="Slide pagination"></div>
+        <button class="swiper-button-next" aria-label="Next slide"></button>
       </div>
       </div>
       
@@ -112,6 +113,7 @@
         </div>
       </div>  
     </section>
+    </main>
     
     <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
