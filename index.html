@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" >
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <link rel="preconnect" href="https://fonts.googleapis.com" >
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
+    <link href="https://fonts.googleapis.com/css2?family=Mohave:wght@600&display=swap" rel="stylesheet" >
+    <title>portable space</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container">
+        <a href="#" class="header__logo">
+          <img src="/logo.svg" alt="Logo" >
+        </a>
+
+        
+        <nav class="header__nav">
+          <ul class="header__menu">
+            <li><a href="#" class="header__link active">Main</a></li>
+            <li><a href="#" class="header__link">Services</a></li>
+            <li><a href="#" class="header__link">Company</a></li>
+            <li><a href="#" class="header__link">Partners</a></li>
+            <li><a href="#" class="header__link">Cases</a></li>
+            <li><a href="#" class="header__link">Contacts</a></li>
+          </ul>
+          
+          <div class="header__buttons">
+            <button class="header__btn header__btn--primary"><span class="header__btn-text">Get in touch</span></button>
+            <button class="header__btn header__btn--secondary">Login</button>
+          </div>
+        </nav>
+        
+        <button class="header__burger" aria-label="Toggle menu">
+          <img src="/burger.svg" alt="Menu" class="header__burger-icon" >
+          <img src="/x.svg" alt="Close" class="header__burger-close" >
+        </button>
+      </div>
+    </header>
+    
+    <section class="hero">
+      <h1 class="hero__title">Portable Space</h1>
+      
+      <div class="hero__image">
+        <img src="/hero-main.png" alt="Container" class="hero__container-img" >
+        <div class="hero__dots">
+          <button class="hero__dot hero__dot--first" data-index="0"></button>
+          <button class="hero__dot hero__dot--second" data-index="1"></button>
+          <button class="hero__dot hero__dot--third" data-index="2"></button>
+        </div>
+      </div>
+      
+      <div class="swiper hero__slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide hero__item hero__item--first">
+            <div class="hero__item-content">
+            <h2 class="hero__slide-title">Unlock Your Brain's Full&nbsp;Potentia</h2>
+            <p class="hero__slide-text">Efficient logistics transportation ensures fast and reliable delivery of goods worldwide.</p>
+            <img src="/dhl.svg" alt="DHL" class="hero__slide-svg" >
+          </div>
+          </div>
+          
+          <div class="swiper-slide hero__item hero__item--second">
+            <div class="hero__item-content">
+            <h2 class="hero__slide-title">Move Effortlessly <br>in just minutes</h2>
+            <p class="hero__slide-text">Explore a variety of premium products crafted to make life easier and brighter.</p>
+            <img src="/fedex.svg" alt="FedEx" class="hero__slide-svg" >
+          </div>
+          </div>
+          
+          <div class="swiper-slide hero__item hero__item--third">
+          <div class="hero__item-content">
+            <h2 class="hero__slide-title">Global support</h2>
+            <p class="hero__slide-text">The largest logistics companies in the world work and cooperate with us</p>
+            <img src="/amazon.svg" alt="Amazon" class="hero__slide-svg" >
+          </div>
+          </div>
+        </div>
+        <div class="hero__slider-buttons">
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+      </div>
+      
+      <div class="hero__text-block hero__text-block--header">
+        <div class="hero__text-item">
+          <p class="hero__text-large">Discover a wide range of high-quality products designed to simplify your life and bring joy to&nbsp;your everyday moments</p>
+          <p class="hero__text-small">wall street journal, Mike Lopes</p>
+        </div>
+        <div class="hero__text-item">
+          <p class="hero__text-large">Unlock Your super Brain's Full Potential The Breakthrough Solution for first Memory, Focus, and Mental total Clarity</p>
+          <p class="hero__text-small">Times daily, christopher miller</p>
+        </div>
+      </div>
+      
+       <div class="hero__footer">
+        <div class="hero__footer-inner">
+        <span class="hero__footer-why">why us</span>
+        <p class="hero__footer-text">Tailoring portable <br> solutions <span>for all industries</span></p>
+      </div>
+        <div class="hero__footer-grid">
+          <div class="hero__footer-grid-item">
+            <p class="hero__footer-grid-text-top">Leading the way <br style=" @media (max-width: 767px) { display: none; }">forward</p>
+            <p class="hero__footer-grid-text-bottom">More 450 industry leaders trast&nbsp;us</p>
+          </div>
+          <div class="hero__footer-grid-item">
+            <p class="hero__footer-grid-number">+450</p>
+          </div>
+        </div>
+      </div>  
+    </section>
+    
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+// Цвета
+$color-white: #ffffff;
+$color-black: #000000;
+$color-gray: #888888;
+$color-gray-light: #f9f9f9;
+
+$color-text: rgba(255, 255, 255, 0.87);
+$color-text-dark: #213547;
+
+// Шрифты
+$font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+$font-family-mohave: 'Mohave', sans-serif;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-light: 300;
+
+// Размеры
+$line-height: 1.5;
+$border-radius: 8px;
+
+// Переходы
+$transition: 0.3s;
+
+// Брейкпоинты (desktop first)
+$desktop: 1439px;
+$tablet: 1023px;
+$mobile: 767px;
+

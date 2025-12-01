@@ -1,0 +1,36 @@
+@use './variables' as *;
+
+:root {
+  font-family: $font-family;
+  line-height: $line-height;
+  font-weight: $font-weight-normal;
+}
+
+body {
+  margin: 0;
+  background-color: #030303;
+  position: relative;
+
+  @media (max-width: 1023px) {
+    &::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #06101E;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity $transition, visibility $transition;
+      z-index: 50;
+      pointer-events: none;
+    }
+
+    &.menu-open::before {
+      opacity: 0.95;
+      visibility: visible;
+      pointer-events: auto;
+    }
+  }
+}
