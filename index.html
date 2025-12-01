@@ -45,7 +45,10 @@
       <h1 class="hero__title">Portable Space</h1>
       
       <div class="hero__image">
-        <img src="/hero-main.png" alt="Container" class="hero__container-img" loading="lazy" >
+        <picture>
+          <source srcset="/hero-main.webp" type="image/webp">
+          <img src="/hero-main.png" alt="Container" class="hero__container-img" fetchpriority="high" >
+        </picture>
         <div class="hero__dots" role="tablist" aria-label="Slider navigation dots">
           <button class="hero__dot hero__dot--first" data-index="0" aria-label="Go to slide 1" role="tab" aria-selected="true"></button>
           <button class="hero__dot hero__dot--second" data-index="1" aria-label="Go to slide 2" role="tab" aria-selected="false"></button>

@@ -9,11 +9,21 @@ const burger = document.querySelector(".header__burger");
 const nav = document.querySelector(".header__nav");
 
 if (burger && nav) {
+  let scrollPosition = 0;
+
   burger.addEventListener("click", () => {
     const isActive = burger.classList.contains("active");
     burger.classList.toggle("active");
     nav.classList.toggle("active");
     document.body.classList.toggle("menu-open");
+
+    if (!isActive) {
+      scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+      document.body.style.top = `-${scrollPosition}px`;
+    } else {
+      document.body.style.top = "";
+      window.scrollTo(0, scrollPosition);
+    }
 
     burger.setAttribute("aria-expanded", !isActive);
   });
